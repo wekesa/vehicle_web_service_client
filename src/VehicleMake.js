@@ -48,16 +48,18 @@ class VehicleMake extends Component {
     }
     render() {
         return (
-            <div>
-                <h4>Category {this.props.vehicleMake.make} : </h4>
+            <div className="api_data">
+                <h4>Vehicle Make Category: {this.props.vehicleMake.make}</h4>
                 {/*<p>{this.props.vehicleMake.description}</p>*/}
-                <div className="row">
-                    <div className="column"><strong>Model Name</strong></div>
-                    <div className="column"><strong>Vehicle Price</strong></div>
-                    <div className="column"><strong>Vehicle Year</strong></div>
-                    <div className="column"><strong>Description</strong></div>
-                </div>
+                <table className="table-vehicle">
+                    <tr>
+                        <th>Model Name</th>
+                        <th>Vehicle Price</th>
+                        <th>Vehicle Year</th>
+                        <th>Description</th>
+                    </tr>
                 {this.state.vehicleModels.map((vehicle, index) => <VehicleModel key={index} vehicleModel={vehicle}/>)}
+                </table>
                 <div>
                     <br/>
                 </div>

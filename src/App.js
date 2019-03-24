@@ -51,8 +51,9 @@ class App extends Component {
                 <header className="App-header">
                     <p>Vehicle Web service Client</p>
                 </header>
+                <div className="title">
                  {this.state.vehicles.map((vehicle, index) => <VehicleMake key={index} vehicleMake={vehicle}/>)}
-
+                </div>
             </div>
         );
     }
